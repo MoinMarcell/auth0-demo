@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class AuthController {
 
 	@GetMapping("/me")
-	public GitHubUser home(@AuthenticationPrincipal OidcUser principal) {
+	public CustomOAuth2User home(@AuthenticationPrincipal OidcUser principal) {
 		if (principal != null) {
-			return GitHubUser.builder()
+			return CustomOAuth2User.builder()
 					.username(principal.getNickName())
 					.avatarUrl(principal.getPicture())
 					.build();

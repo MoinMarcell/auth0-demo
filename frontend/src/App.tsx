@@ -2,13 +2,13 @@ import './App.css'
 import {useEffect, useState} from "react";
 import axios from "axios";
 
-type GitHubUser = {
+type CustomOAuth2User = {
     username: string,
     avatarUrl: string,
 }
 
 export default function App() {
-    const [gitHubUser, setGitHubUser] = useState<GitHubUser | undefined>(undefined)
+    const [gitHubUser, setGitHubUser] = useState<CustomOAuth2User | undefined>(undefined)
 
     function fetchUsername() {
         axios.get("/api/auth/me").then((res) => {
