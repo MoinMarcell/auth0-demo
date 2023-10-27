@@ -1,2 +1,15 @@
 /.idea/
 *.iml
+
+# backend
+/backend/.mvn/
+/backend/mvnw
+/backend/mvnw.cmd
+/backend/target/
+/backend/.apt_generated
+/backend/.classpath
+/backend/.factorypath
+/backend/.project
+/backend/.settings
+/backend/.springBeans
+/backend/.sts4-cache
